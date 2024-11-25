@@ -1,0 +1,174 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #2c3e50;
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #234;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 0;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background: #34495e;
+    padding-left: 25px;
+}
+
+.sidebar-menu a.active {
+    background: #3498db;
+}
+
+.sidebar-menu i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Toggle Button Styles */
+#sidebar-toggle {
+    position: fixed;
+    left: 5px;
+    top: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#sidebar-toggle:hover {
+    background: #34495e;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.main-content.shifted {
+    margin-left: 250px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Action Buttons Styles */
+.action-buttons {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.upload-section, .download-section {
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #45a049;
+}
+
+button {
+    padding: 8px 15px;
+    background: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #007399;
+}
+
+/* DataTables Customization */
+.dataTables_wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .main-content.shifted {
+        margin-left: 0;
+    }
+    
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+}
