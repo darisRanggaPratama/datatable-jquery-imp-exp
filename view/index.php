@@ -6,6 +6,7 @@
     <title>Data Mahasiswa</title>
     
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -27,20 +28,21 @@
             <h2>Data Mahasiswa</h2>
             
             <!-- Add Button -->
-            <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addModal">
+            <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">
                 Tambah Mahasiswa
             </button>
-
+            
             <!-- DataTable -->
             <table id="mahasiswaTable" class="display">
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Edit</th>
                         <th>NIM</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Prodi</th>
-                        <th>Aksi</th>
+                        <th>Drop</th>
                     </tr>
                 </thead>
             </table>

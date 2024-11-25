@@ -9,18 +9,27 @@ $(document).ready(function() {
         },
         "columns": [
             { "data": "id_mhs" },
+            {
+                "data": null,
+                "orderable": false,
+                "searchable": false,
+                "render": function(data, type, row) {
+                    return `
+                        <button onclick="editData('${row.id_mhs}')" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></button>                        
+                    `;
+                }
+            },
             { "data": "nim" },
             { "data": "nama" },
             { "data": "alamat" },
             { "data": "prodi" },
             {
                 "data": null,
-                "orderable": true,
+                "orderable": false,
                 "searchable": false,
                 "render": function(data, type, row) {
-                    return `
-                        <button onclick="editData('${row.id_mhs}')" class="btn btn-primary btn-sm">Edit</button>
-                        <button onclick="deleteData('${row.id_mhs}')" class="btn btn-danger btn-sm">Delete</button>
+                    return `                        
+                        <button onclick="deleteData('${row.id_mhs}')" class="btn btn-danger btn-sm"><i class="fas fa-backspace"></i></button>
                     `;
                 }
             }
